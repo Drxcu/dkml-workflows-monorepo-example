@@ -6,7 +6,7 @@ let v : (Fpath.t option, string) result =
     ~basenames:[ Fpath.v "README.md" ]
     ()
 
-(* Print out the search results *)
+(* Print out the search results and do it good *)
 let () =
   Fmt.pr "README.md Search Results:@ @[  %a@]@."
     (Rresult.R.pp
