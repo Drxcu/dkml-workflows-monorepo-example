@@ -1,4 +1,4 @@
-name: Build and Test OCaml
+name: Opam Regular - Build and Test
 
 env:
   OPAM_PACKAGE: "your_example"

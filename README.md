@@ -29,6 +29,35 @@ You can see an example workflow at https://github.com/diskuv/dkml-workflows-exam
 
 [1] `setup-dkml/macos-darwin_all` is doing double-duty: it is compiling x86_64 and arm64 systems.
 
+## Making your own workflow
+
+This GitHub repository includes examples for multiple build configurations:
+* Opam and Dune. We call this build workflow `Opam Regular`.
+* Opam Monorepo and Dune. [Opam Monorepo](https://github.com/ocamllabs/opam-monorepo) is a re-packaging of Opam that makes it easy to support cross-compiling. **It is not for beginners.** We call this build workflow `Opam Monorepo`
+
+You can consult the table below to see which files you should copy into your own workflow. If you use [Opam Monorepo](https://github.com/ocamllabs/opam-monorepo) then you only need to look at files that have `Opam Monorepo` in **Build Workflow**. If you use `Opam Regular` then look at `Opam Regular` in **Build Workflow**.
+
+| Build Workflow                  | File or Directory                        |
+| ------------------------------- | ---------------------------------------- |
+| `Opam Regular`, `Opam Monorepo` | .gitattributes                           |
+| `Opam Regular`, `Opam Monorepo` | .github/workflows/build.yml              |
+| `Opam Regular`, `Opam Monorepo` | .github/workflows/static.yml             |
+| `Opam Regular`, `Opam Monorepo` | .github/workflows/static/mlc_config.json |
+| `Opam Regular`, `Opam Monorepo` | .gitignore                               |
+| `Opam Regular`, `Opam Monorepo` | .ocamlformat                             |
+| `Opam Regular`, `Opam Monorepo` | LICENSE                                  |
+| `Opam Regular`, `Opam Monorepo` | Makefile                                 |
+| `Opam Regular`, `Opam Monorepo` | README.md                                |
+| `Opam Regular`, `Opam Monorepo` | bin/dune                                 |
+| `Opam Regular`, `Opam Monorepo` | bin/main.ml                              |
+| `Opam Regular`, `Opam Monorepo` | dune-project                             |
+| `Opam Monorepo`                 | duniverse/                               |
+| `Opam Regular`, `Opam Monorepo` | lib/dune                                 |
+| `Opam Regular`, `Opam Monorepo` | test/dune                                |
+| `Opam Regular`, `Opam Monorepo` | test/your_example.ml                     |
+| `Opam Regular`, `Opam Monorepo` | your_example.opam                        |
+| `Opam Monorepo`                 | your_example.opam.locked                 |
+
 ## Status
 
 | What             | Branch/Tag | Status                                                                                                                                                                                        |
